@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run00.Utilities.UnitTest", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3F8DC940-6A28-474D-A0E6-9474310EB0EF}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\logo.pdn = .nuget\logo.pdn
-		.nuget\logo.png = .nuget\logo.png
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 		.nuget\Run00.Utilities.nuspec = .nuget\Run00.Utilities.nuspec
+		.nuget\Run00.Utilities.pdn = .nuget\Run00.Utilities.pdn
+		.nuget\Run00.Utilities.png = .nuget\Run00.Utilities.png
 	EndProjectSection
 EndProject
 Global

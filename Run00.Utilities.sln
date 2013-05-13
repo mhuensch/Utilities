@@ -13,7 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{3F8DC9
 		.nuget\Run00.Utilities.nuspec = .nuget\Run00.Utilities.nuspec
 		.nuget\Run00.Utilities.pdn = .nuget\Run00.Utilities.pdn
 		.nuget\Run00.Utilities.png = .nuget\Run00.Utilities.png
+		.nuget\Run00.WebUtilities.nuspec = .nuget\Run00.WebUtilities.nuspec
+		.nuget\Run00.WebUtilities.pdn = .nuget\Run00.WebUtilities.pdn
+		.nuget\Run00.WebUtilities.png = .nuget\Run00.WebUtilities.png
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run00.WebUtilities", "Run00.WebUtilities\Run00.WebUtilities.csproj", "{E0C7A0DB-A41F-4A92-8A5A-C459AB861045}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Run00.WebUtilities.UnitTest", "Run00.WebUtilities.UnitTest\Run00.WebUtilities.UnitTest.csproj", "{FE3062D2-105D-4EB8-B4B9-B671944DB598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +36,14 @@ Global
 		{D19D7D57-8B6B-4395-8B5F-AA147FEAE8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D19D7D57-8B6B-4395-8B5F-AA147FEAE8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D19D7D57-8B6B-4395-8B5F-AA147FEAE8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C7A0DB-A41F-4A92-8A5A-C459AB861045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C7A0DB-A41F-4A92-8A5A-C459AB861045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C7A0DB-A41F-4A92-8A5A-C459AB861045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C7A0DB-A41F-4A92-8A5A-C459AB861045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE3062D2-105D-4EB8-B4B9-B671944DB598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3062D2-105D-4EB8-B4B9-B671944DB598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3062D2-105D-4EB8-B4B9-B671944DB598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3062D2-105D-4EB8-B4B9-B671944DB598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

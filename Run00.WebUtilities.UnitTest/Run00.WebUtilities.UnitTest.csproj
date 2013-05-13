@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D19D7D57-8B6B-4395-8B5F-AA147FEAE8DE}</ProjectGuid>
+    <ProjectGuid>{FE3062D2-105D-4EB8-B4B9-B671944DB598}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Run00.Utilities.UnitTest</RootNamespace>
-    <AssemblyName>Run00.Utilities.UnitTest</AssemblyName>
+    <RootNamespace>Run00.WebUtilities.UnitTest</RootNamespace>
+    <AssemblyName>Run00.WebUtilities.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -41,6 +41,8 @@
       <HintPath>..\packages\Run00.MsTest.0.10.10\lib\Run00.MsTest.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -55,27 +57,22 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Artifacts\ControllerTest.cs" />
     <Compile Include="Artifacts\Controller.cs" />
+    <Compile Include="Artifacts\ControllerTest.cs" />
     <Compile Include="Artifacts\TestController.cs" />
-    <Compile Include="Artifacts\TestPoco.cs" />
-    <Compile Include="ForExtensionsForEnumerableOfT\FullOuterJoin.cs" />
-    <Compile Include="ForExtensionsForString\ReplaceLast.cs" />
-    <Compile Include="ForKeyComparer\Constructor.cs" />
-    <Compile Include="ForKeyComparer\GetHashCode.cs" />
-    <Compile Include="ForKeyComparer\Equals.cs" />
+    <Compile Include="ForExtensionsForHtmlHelper\Truncate.cs" />
+    <Compile Include="ForExtensionsForType\ToControllerName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Run00.Utilities\Run00.Utilities.csproj">
-      <Project>{6887b2b9-7b3b-45c7-a025-1f7a4b25e838}</Project>
-      <Name>Run00.Utilities</Name>
+    <ProjectReference Include="..\Run00.WebUtilities\Run00.WebUtilities.csproj">
+      <Project>{e0c7a0db-a41f-4a92-8a5a-c459ab861045}</Project>
+      <Name>Run00.WebUtilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

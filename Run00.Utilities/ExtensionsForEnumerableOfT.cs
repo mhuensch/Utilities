@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace Run00.Utilities
 {
@@ -84,8 +83,17 @@ namespace Run00.Utilities
 			return allAsMatchingBs.ToList().Union(bCopy.Select(bItem => projection(default(T), bItem)));
 		}
 
-		public static TResult Random<T, TResult>(this IEnumerable<TResult> source)
+		/// <summary>
+		/// Gets a random item from the Enumerable.
+		/// </summary>
+		/// <typeparam name="TResult">The type of the result.</typeparam>
+		/// <param name="source">The source.</param>
+		/// <returns></returns>
+		public static TResult Random<TResult>(this IEnumerable<TResult> source)
 		{
+			if (source.Count() == 0)
+				return default(TResult);
+
 			var index = _rand.Next(source.Count());
 			return source.ElementAt(index);
 		}

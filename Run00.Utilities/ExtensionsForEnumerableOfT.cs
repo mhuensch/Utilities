@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Run00.Utilities
 {
@@ -82,5 +83,13 @@ namespace Run00.Utilities
 
 			return allAsMatchingBs.ToList().Union(bCopy.Select(bItem => projection(default(T), bItem)));
 		}
+
+		public static TResult Random<T, TResult>(this IEnumerable<TResult> source)
+		{
+			var index = _rand.Next(source.Count());
+			return source.ElementAt(index);
+		}
+
+		private static readonly Random _rand = new Random();
 	}
 }

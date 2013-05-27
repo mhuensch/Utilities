@@ -13,9 +13,7 @@ namespace Run00.Utilities
 		/// <returns></returns>
 		public static string ReplaceLast(this string source, string lookFor, string replaceWith)
 		{
-			var index = source.LastIndexOf(lookFor);
-			var length = index == -1 ? source.Length : index;
-			return source.Substring(0, length);
+			return new Regex(lookFor, RegexOptions.RightToLeft).Replace(source, replaceWith, 1);
 		}
 
 		/// <summary>
@@ -27,11 +25,7 @@ namespace Run00.Utilities
 		/// <returns></returns>
 		public static string ReplaceFirst(this string source, string lookFor, string replaceWith)
 		{
-			var index = source.IndexOf(lookFor);
-			if (index == -1)
-				return source;
-
-			return source.Substring(index, source.Length);
+			return new Regex(lookFor).Replace(source, replaceWith, 1);
 		}
 
 		/// <summary>

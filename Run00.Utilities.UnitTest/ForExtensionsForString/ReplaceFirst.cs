@@ -3,32 +3,32 @@ using Run00.MsTest;
 
 namespace Run00.Utilities.UnitTest.ForExtensionsForType
 {
-	[TestClass, CategorizeByConventionClass(typeof(ReplaceLast))]
-	public class ReplaceLast
+	[TestClass, CategorizeByConventionClass(typeof(ReplaceFirst))]
+	public class ReplaceFirst
 	{
 		[TestMethod, CategorizeByConvention]
-		public void WhenStringEndsInValue_ShouldReplaceValue()
+		public void WhenStringStartsInValue_ShouldReplaceValue()
 		{
 			//Arrange
 			var original = "Hello World";
 			var expected = "Hello ";
 
 			//Act
-			var result = original.ReplaceLast("World", string.Empty);
+			var result = original.ReplaceFirst("World", string.Empty);
 
 			//Assert
 			Assert.AreEqual(expected, result);
 		}
 
 		[TestMethod, CategorizeByConvention]
-		public void WhenStringEndsInValueAfterSameValue_ShouldReplaceEndValue()
+		public void WhenStringFollowsAValueAfterSameValue_ShouldReplaceValue()
 		{
 			//Arrange
 			var original = "Hello World World";
-			var expected = "Hello World ";
+			var expected = "Hello  World";
 
 			//Act
-			var result = original.ReplaceLast("World", string.Empty);
+			var result = original.ReplaceFirst("World", string.Empty);
 
 			//Assert
 			Assert.AreEqual(expected, result);
@@ -42,7 +42,7 @@ namespace Run00.Utilities.UnitTest.ForExtensionsForType
 			var expected = string.Empty;
 
 			//Act
-			var result = original.ReplaceLast("World", string.Empty);
+			var result = original.ReplaceFirst("World", string.Empty);
 
 			//Assert
 			Assert.AreEqual(expected, result);
@@ -55,7 +55,7 @@ namespace Run00.Utilities.UnitTest.ForExtensionsForType
 			var original = "Hello World";
 
 			//Act
-			var result = original.ReplaceLast("Hahaha", string.Empty);
+			var result = original.ReplaceFirst("Hahaha", string.Empty);
 
 			//Assert
 			Assert.AreEqual(original, result);
@@ -69,7 +69,7 @@ namespace Run00.Utilities.UnitTest.ForExtensionsForType
 			var expected = "Hello Again";
 
 			//Act
-			var result = original.ReplaceLast("World ", string.Empty);
+			var result = original.ReplaceFirst("World ", string.Empty);
 
 			//Assert
 			Assert.AreEqual(expected, result);

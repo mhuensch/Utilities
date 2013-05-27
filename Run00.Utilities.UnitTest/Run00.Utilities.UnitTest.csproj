@@ -61,6 +61,7 @@
     <Compile Include="Artifacts\TestPoco.cs" />
     <Compile Include="ForExtensionsForEnumerableOfT\FullOuterJoin.cs" />
     <Compile Include="ForExtensionsForEnumerableOfT\Random.cs" />
+    <Compile Include="ForExtensionsForString\ReplaceFirst.cs" />
     <Compile Include="ForExtensionsForString\ReplaceLast.cs" />
     <Compile Include="ForKeyComparer\Constructor.cs" />
     <Compile Include="ForKeyComparer\GetHashCode.cs" />

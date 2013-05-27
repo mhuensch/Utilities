@@ -59,6 +59,7 @@
     <Compile Include="Artifacts\Controller.cs" />
     <Compile Include="Artifacts\TestController.cs" />
     <Compile Include="Artifacts\TestPoco.cs" />
+    <Compile Include="ForExtensionsForEnumerableOfT\NextElement.cs" />
     <Compile Include="ForExtensionsForEnumerableOfT\FullOuterJoin.cs" />
     <Compile Include="ForExtensionsForEnumerableOfT\Random.cs" />
     <Compile Include="ForExtensionsForString\ReplaceFirst.cs" />

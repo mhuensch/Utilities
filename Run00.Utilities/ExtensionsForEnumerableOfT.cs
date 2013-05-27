@@ -84,6 +84,31 @@ namespace Run00.Utilities
 		}
 
 		/// <summary>
+		/// Gets the next element in the enumerable or returns the first element.
+		/// </summary>
+		/// <typeparam name="TResult">The type of the result.</typeparam>
+		/// <param name="source">The source enumerable.</param>
+		/// <param name="previous">The previous element.</param>
+		/// <returns></returns>
+		public static TResult NextElement<TResult>(this IEnumerable<TResult> source, TResult previous)
+		{
+			Contract.Requires(source != null);
+
+			if (source.Count() == 0)
+				return default(TResult);
+
+			var list = source.ToList();
+			if (list == null)
+				return default(TResult);
+
+			var index = list.IndexOf(previous) + 1;
+			if (index >= list.Count)
+				index = 0;
+
+			return list[index];
+		}
+
+		/// <summary>
 		/// Gets a random item from the Enumerable.
 		/// </summary>
 		/// <typeparam name="TResult">The type of the result.</typeparam>
